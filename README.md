@@ -18,3 +18,21 @@ var maxArea = function(height) {
     return max
 };
 ```
+
+## 数组中重复的数字
+```javascript
+var findRepeatNumber = function(nums) {
+    let map = new Map();
+    let result = 0;
+    for(let i =0;i<nums.length;i++){
+        if(map.has(nums[i])){
+            result = nums[i];
+            break;
+        }
+        else{
+            map.set(nums[i],nums[i])
+        }
+    }
+    return result
+};
+```
